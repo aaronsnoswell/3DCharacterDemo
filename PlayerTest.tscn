@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/FollowBoomCamera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Environment/TestScene.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+ROOT_MOTION_SCALE = 1.4
+MASS = 0.6
+
+[node name="FollowCam" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0.866026, 0, -0.866026, 0.5, 0, 0, 0, 1, 0, 0, 0 )
+target_path = NodePath("../Player")
+follow_speed = 7.0
+angle = 60.0
+
+[node name="TestScene" parent="." instance=ExtResource( 3 )]

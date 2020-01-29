@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://Player/AlwaysVisible.shader" type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[resource]
+next_pass = SubResource( 1 )
+shader = ExtResource( 1 )
+shader_param/color = Color( 0.2, 0.2, 0.2, 1 )
