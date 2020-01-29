@@ -1,0 +1,3 @@
+[submodule "Player/3DCharacter"]
+	path = Player/3DCharacter
+	url = https://github.com/aaronsnoswell/3DCharacter.git
